@@ -14,6 +14,7 @@
 		FAF531C41E67C239002760EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF531C21E67C239002760EC /* LaunchScreen.storyboard */; };
 		FAF531CF1E67C239002760EC /* tippyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF531CE1E67C239002760EC /* tippyTests.swift */; };
 		FAF531DA1E67C239002760EC /* tippyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF531D91E67C239002760EC /* tippyUITests.swift */; };
+		FAF531E81E67E794002760EC /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF531E71E67E794002760EC /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		FAF531D51E67C239002760EC /* tippyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tippyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF531D91E67C239002760EC /* tippyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tippyUITests.swift; sourceTree = "<group>"; };
 		FAF531DB1E67C239002760EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAF531E71E67E794002760EC /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				FAF531B91E67C239002760EC /* AppDelegate.swift */,
 				FAF531BB1E67C239002760EC /* ViewController.swift */,
 				FAF531BD1E67C239002760EC /* Main.storyboard */,
+				FAF531E71E67E794002760EC /* SettingViewController.swift */,
 				FAF531C01E67C239002760EC /* Assets.xcassets */,
 				FAF531C21E67C239002760EC /* LaunchScreen.storyboard */,
 				FAF531C51E67C239002760EC /* Info.plist */,
@@ -261,6 +264,7 @@
 			files = (
 				FAF531BC1E67C239002760EC /* ViewController.swift in Sources */,
 				FAF531BA1E67C239002760EC /* AppDelegate.swift in Sources */,
+				FAF531E81E67E794002760EC /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
