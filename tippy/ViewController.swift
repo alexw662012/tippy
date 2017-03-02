@@ -26,9 +26,19 @@ class ViewController: UIViewController {
         print("view will appear")
         let defaults = UserDefaults.standard
         let defaultTip = defaults.object(forKey: "default_tips") as? Int
+        let defaultTheme = defaults.object(forKey: "default_themes") as? Int
         
         TipControl.selectedSegmentIndex = defaultTip ?? 0
         TipControl.sendActions(for: UIControlEvents.valueChanged)
+        
+        if(defaultTheme == nil || defaultTheme == 0){
+            self.view.backgroundColor = UIColor.white
+        }else if(defaultTheme! == 1){
+            self.view.backgroundColor = UIColor.gray
+
+        }
+        
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -38,6 +48,7 @@ class ViewController: UIViewController {
         UIView.animate(withDuration: 2, animations: {
             self.SeperatorView.alpha = 1
         })
+        BillField.becomeFirstResponder()
     }
     
     override func viewWillDisappear(_ animated: Bool) {

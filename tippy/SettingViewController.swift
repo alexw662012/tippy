@@ -10,9 +10,16 @@ import UIKit
 
 class SettingViewController: UIViewController {
 
+    @IBOutlet weak var DefaultThemeControl: UISegmentedControl!
     @IBOutlet weak var DefaultTipControl: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
+        let defaults = UserDefaults.standard
+        let defaultTip = defaults.object(forKey: "default_tips") as? Int
+        let defaultTheme = defaults.object(forKey: "default_themes") as? Int
+        
+        DefaultTipControl.selectedSegmentIndex = defaultTip ?? 0
+        DefaultThemeControl.selectedSegmentIndex = defaultTheme ?? 0
 
         // Do any additional setup after loading the view.
     }
@@ -22,6 +29,12 @@ class SettingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func setDefaultThemes(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        let index = DefaultThemeControl.selectedSegmentIndex
+        defaults.set(index, forKey: "default_themes")
+        defaults.synchronize()
+    }
 
     @IBAction func setDefaultTips(_ sender: AnyObject) {
         let defaults = UserDefaults.standard
